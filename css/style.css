@@ -296,7 +296,7 @@ nav ul li a {
 }
 
 #about .div-img-bg {
-  background-image: url("../images/header.jpeg");
+  background-image: url("../images/profile.jpeg");
   padding-bottom: 30px;
   /* border: 20px solid #333333; */
 }
@@ -312,7 +312,7 @@ nav ul li a {
 
 #about .about-content .p-heading {
   font-family: 'Poppins', helvetica;
-  font-size: 28px;
+  font-size: 24px;
   text-align: left;
 }
 
