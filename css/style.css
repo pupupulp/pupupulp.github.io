@@ -292,11 +292,13 @@ nav ul li a {
   width: 100%;
   height: auto;
   background: #050505;
+  margin-top: 50px;
 }
 
 #about .div-img-bg {
+  background-image: url("../images/header.jpeg");
   padding-bottom: 30px;
-  border: 20px solid #333333;
+  /* border: 20px solid #333333; */
 }
 
 #about .div-img-bg .about-img img {
