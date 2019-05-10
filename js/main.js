@@ -46,12 +46,12 @@ $(document).ready(function() {
     if (scroll > 200 ) {
       $("#main-nav, #main-nav-subpage").slideDown(700);
       $("#main-nav-subpage").removeClass('subpage-nav');
-      $('.back-to-top').fadeIn('slow');
+      // $('.back-to-top').fadeIn('slow');
     } else {
       $("#main-nav").slideUp(700);
       $("#main-nav-subpage").hide();
       $("#main-nav-subpage").addClass('subpage-nav');
-      $('.back-to-top').fadeOut('slow');
+      // $('.back-to-top').fadeOut('slow');
     }
   });
 
