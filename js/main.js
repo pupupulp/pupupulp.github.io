@@ -101,4 +101,43 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
   });
+
+  // skills radial
+  $(function() {
+    $(".radial-progress").each(function(){
+      var $this = $(this),
+        progPercent = $this.data('prog-percent');
+        
+      var bar = new ProgressBar.Circle(this, {
+        color: '#aaa',
+        strokeWidth: 3,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+          
+        },
+        from: { color: '#aaa', width: 1 },
+        to: { color: '#333333', width: 3 },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+  
+          var value = Math.round(circle.value() * 100);
+          if (value === 0) {
+            circle.setText('');
+          } else {
+            circle.setText(value);
+          }
+  
+        }
+      });
+      
+      $(this).waypoint(function(){
+         bar.animate(progPercent);  
+      },{offset: "90%"})
+      
+    });
+  });
 });
