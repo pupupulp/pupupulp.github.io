@@ -503,19 +503,40 @@ nav ul li a {
   height: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: #fff;
+}
+
+.stats-heading {
+  font-family: 'Poppins', helvetica;
+}
+
+.stats-subheading {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .stat-box {
   color: #fff;
   text-align: center;
-  padding-bottom: 20px;
   background: #050505;
   opacity: .8;
 }
 
-.counter-icon {
-  margin-bottom: 1rem;
-  padding: 20px;
+.stat-count .stat-contribs-header, 
+.stat-count .stat-lstreak-header, 
+.stat-count .stat-cstreak-header {
+  padding-top: 20px;
+}
+
+.stat-count .stat-contribs-footer,
+.stat-count .stat-lstreak-footer,
+.stat-count .stat-cstreak-footer {
+  padding-bottom: 20px;
+}
+
+.counter-text p{
+  display: inline !important;
 }
 
 .stat-count .counter {
@@ -523,6 +544,10 @@ nav ul li a {
   font-size: 1.5rem;
   margin-bottom: 0;
   color: #fff;
+}
+
+#stats-calendar {
+  display: none;
 }
 
 /* Contact Styles */

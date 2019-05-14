@@ -21,6 +21,7 @@
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
   <link href="lib/hover/hover.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/github-calendar/github-calendar-responsive.css" rel="stylesheet">
 
   <!-- main css -->
   <link href="css/style.css" rel="stylesheet">
@@ -248,46 +249,53 @@
   <!-- start of stats section -->
   <div id="stats" class="parallax-shadow">
     <div class="container">
+
+      <div class="row">
+      
+          <div class="col-sm-12">
+            <h3 class="stats-heading"><b>My Github Statistics</b></h3>
+            <h6 class="stats-subheading"><b>OPENSOURCE ACTIVITIES</b></h6>
+          </div>
+      </div>
+
       <div class="row">
 
         <div class="col-sm-4 col-lg-4">
           <div class="stat-box pt-4 pt-md-0">
-            <div class="counter-icon">
-              <span><i class="fa fa-2x fa-terminal"></i></span>
-            </div>
             <div class="stat-count">
-              <p class="counter">450</p>
-              <span class="counter-text">COMMITS</span>
+              <p class="stat-contribs-header"></p>
+              <span class="counter-text"><p class="stat-contribs counter"></p> commit(s)</span>
+              <p class="stat-contribs-footer"></p>
             </div>
           </div>
         </div>
 
         <div class="col-sm-4 col-lg-4">
           <div class="stat-box pt-4 pt-md-0">
-            <div class="counter-icon">
-                <span><i class="fa fa-2x fa-code"></i></span>
-            </div>
             <div class="stat-count">
-              <p class="counter">15</p>
-              <span class="counter-text">REPOSITORIES</span>
+              <p class="stat-lstreak-header"></p>
+              <span class="counter-text"><p class="stat-lstreak counter"></p> day(s)</span>
+              <p class="stat-lstreak-footer"></p>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-4 col-lg-4">
+          <div class="col-sm-4 col-lg-4">
           <div class="stat-box pt-4 pt-md-0">
-            <div class="counter-icon">
-                <span><i class="fa fa-2x fa-star"></i></span>
-            </div>
             <div class="stat-count">
-              <p class="counter">550</p>
-              <span class="counter-text">STARS</span>
+              <p class="stat-cstreak-header"></p>
+              <span class="counter-text"><p class="stat-cstreak counter"></p> day(s)</span>
+              <p class="stat-cstreak-footer"></p>
             </div>
           </div>
         </div>
 
       </div>
     </div>
+  </div>
+  <div id="stats-calendar" class="calendar">
+      <!-- Loading stuff -->
+      Loading the data just for you.
   </div>
   <!-- end of stats section -->
 
@@ -407,6 +415,7 @@
   <script src="lib/counterup/jquery.waypoints.min.js"></script>
   <script src="lib/counterup/jquery.counterup.js"></script>
   <script src="lib/progressbar/progressbar.min.js"></script>
+  <script src="lib/github-calendar/github-calendar.js"></script>
 
   <!-- main script -->
   <script src="js/main.js"></script>

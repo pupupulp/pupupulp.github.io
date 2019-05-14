@@ -41,11 +41,13 @@ $(function () {
   $('.greetings').prepend(greetings[greet] + '<br><br>');
 });
 
+new GitHubCalendar(".calendar", "pupupulp", { responsive: true });
+
 // document ready
 $(document).ready(function() {
 
   'use strict';
-  
+
   // smooth scrolling
   $(document).on("scroll", onScroll);
 
@@ -137,8 +139,8 @@ $(document).ready(function() {
 
   // counter
   $('.counter').counterUp({
-		delay: 15,
-		time: 2000
+    delay: 15,
+    time: 2000
   });
   
   // back to top
