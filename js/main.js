@@ -153,7 +153,7 @@ $(document).ready(function() {
         progPercent = $this.data('prog-percent');
         
       var bar = new ProgressBar.Circle(this, {
-        color: '#aaa',
+        color: '#050505',
         strokeWidth: 3,
         trailWidth: 1,
         easing: 'easeInOut',
@@ -161,8 +161,8 @@ $(document).ready(function() {
         text: {
           
         },
-        from: { color: '#aaa', width: 1 },
-        to: { color: '#333333', width: 3 },
+        from: { color: '#050505', width: 1 },
+        to: { color: '#333', width: 3 },
         // Set default step function for all animate calls
         step: function(state, circle) {
           circle.path.setAttribute('stroke', state.color);

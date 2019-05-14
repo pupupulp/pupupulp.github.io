@@ -310,6 +310,7 @@ nav ul li a {
   font-family: 'Poppins', helvetica;
   font-size: 24px;
   text-align: left;
+  color: #fff;
 }
 
 #about .about-content .p-body {
@@ -486,7 +487,6 @@ nav ul li a {
   height: 16px; 
   border-radius: 10px; 
   z-index: 1;
-  /* box-shadow: 0 0 0 8px rgba(255,171,0, .4);  */
   box-shadow: 0 0 0 8px #333; 
   background: #fff; 
 }
@@ -651,6 +651,10 @@ nav ul li a {
 
 .credits {
   font-size: 13px;
+}
+
+.heart {
+  color: red;
 }
 
 /* Back to Top Styles */
