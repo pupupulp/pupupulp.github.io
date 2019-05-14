@@ -1,40 +1,40 @@
+var greetings = [
+  'Hello there!',
+  'Its nice to see you here!',
+  'Hi!',
+  'What’s up?',
+  'How’s your day?',
+  'It’s been a while!',
+  'Long time no see!',
+  'Pleased to meet you!',
+  'It’s nice to meet you!',
+  'How do you do?',
+  'Yo!',
+  'Howdy!',
+  'Whazzup?',
+  'Sup?',
+  'G’day mate!',
+  'Hiya!',
+  'Look what the cat dragged in!',
+  'What’s kickin’, little chicken?',
+  'Hello, sunshine!',
+  'Hey, howdy, hi!',
+  'Howdy, partner!',
+  'Peek-a-boo!',
+  'Howdy-doody!',
+  'I come in peace!',
+  'Ahoy, matey!',
+  'What’s crackin’?',
+  'At least, we meet for the first time for the last time!',
+  'Hello, who’s there, I’m talking.',
+  'You know who this is.',
+  'Ghostbusters, whatya want?',
+  'Here’s Johnny!',
+  'Oh, yoooouhoooo!',
+];
+
 // greetings
 $(function () {
-  var greetings = [
-    'Hello there!',
-    'Its nice to see you here!',
-    'Hi!',
-    'What’s up?',
-    'How’s your day?',
-    'It’s been a while!',
-    'Long time no see!',
-    'Pleased to meet you!',
-    'It’s nice to meet you!',
-    'How do you do?',
-    'Yo!',
-    'Howdy!',
-    'Whazzup?',
-    'Sup?',
-    'G’day mate!',
-    'Hiya!',
-    'Look what the cat dragged in!',
-    'What’s kickin’, little chicken?',
-    'Hello, sunshine!',
-    'Hey, howdy, hi!',
-    'Howdy, partner!',
-    'Peek-a-boo!',
-    'Howdy-doody!',
-    'I come in peace!',
-    'Ahoy, matey!',
-    'What’s crackin’?',
-    'At least, we meet for the first time for the last time!',
-    'Hello, who’s there, I’m talking.',
-    'You know who this is.',
-    'Ghostbusters, whatya want?',
-    'Here’s Johnny!',
-    'Oh, yoooouhoooo!',
-  ];
-
   var greet = Math.floor(Math.random() * (greetings.length));
 
   $('.greetings').prepend(greetings[greet] + '<br><br>');
@@ -183,5 +183,92 @@ $(document).ready(function() {
       },{offset: "90%"})
       
     });
+  });
+
+  // contact validation
+  $('form.contactForm').submit(function() {
+    var contactForm = $(this).find('.form-group'),
+      formError = false,
+      emailPattern = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+      contactForm.children('input').each(function() { // run all inputs
+
+      var inputField = $(this); // current input
+      var rule = inputField.attr('data-rule');
+
+      if (rule !== undefined) {
+        var inputError = false; // error flag for current input
+
+        switch (rule) {
+          case 'required':
+            if (inputField.val() === '') {
+              formError = inputError = true;
+            }
+            break;
+
+          case 'email':
+            if (!emailPattern.test(inputField.val())) {
+              formError = inputError = true;
+            }
+            break;
+        }
+        inputField.next('.validation').html(
+          (inputError ? (inputField.attr('data-msg') !== undefined ? inputField.attr('data-msg') : 'Something is wrong about this.') : '')
+        ).show('blind');
+      }
+    });
+
+    contactForm.children('textarea').each(function() { // run all inputs
+
+      var inputField = $(this); // current input
+      var rule = inputField.attr('data-rule');
+
+      if (rule !== undefined) {
+        var inputError = false; // error flag for current input
+
+        switch (rule) {
+          case 'required':
+            if (inputField.val() === '') {
+              formError = inputError = true;
+            }
+            break;
+        }
+        inputField.next('.validation').html(
+          (inputError ? (inputField.attr('data-msg') != undefined ? inputField.attr('data-msg') : 'Something is wrong about this.') : '')
+        ).show('blind');
+      }
+    });
+
+    if (formError) return false;
+    else var formData = $(this).serialize();
+    var action = $(this).attr('action');
+    
+    if(! action) {
+      action = 'script/send-mail.php';
+    }
+
+    console.log(formData);
+    
+    $.ajax({
+      type: "POST",
+      url: action,
+      data: formData,
+      success: function(response) {
+        var result = JSON.parse(response);
+        if (response.code == 200) {
+          var greet = Math.floor(Math.random() * (greetings.length));
+          $("#sendmessage").addClass("show");
+          $("#sendmessage").html(greetins[greet] + ' ' + response.message);
+          $("#errormessage").removeClass("show");
+          $('.contactForm').find("input, textarea").val("");
+        } else {
+          $("#sendmessage").removeClass("show");
+          $("#errormessage").addClass("show");
+          $('#errormessage').html(response.message);
+        }
+
+      }
+    });
+    return false;
   });
 });
