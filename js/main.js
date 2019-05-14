@@ -1,3 +1,4 @@
+var windowFocused = false;
 var greetings = [
   'Hello there!',
   'Its nice to see you here!',
@@ -281,15 +282,23 @@ $(document).ready(function() {
     var formParams = new URLSearchParams(formData);
     var mailToParams = 'subject=' + formParams.get('subject') + '&body=' + formParams.get('body');
     window.open('mailto:mece.martinece@gmail.com?' + mailToParams);
+    windowFocused = false;
 
     $(window).blur(function() {
       var greet = Math.floor(Math.random() * (greetings.length));
-      $("#sendmessage").addClass("show");
-      $("#sendmessage").html(greetings[greet] + ' ' + 'Thank you for sending an email!');
-      $("#errormessage").removeClass("show");
-      $('.contactForm').find("input, textarea").val("");
-      $('#mail-button').val("Send Message");
-      clearTimeout(timeout);
+
+      if (!windowFocused) {
+        $("#sendmessage").addClass("show");
+        $("#sendmessage").html(greetings[greet] + ' ' + 'Thank you for sending an email!');
+        $("#errormessage").removeClass("show");
+        $('.contactForm').find("input, textarea").val("");
+        $('#mail-button').val("Send Message");
+        clearTimeout(timeout);
+      }
+    });
+
+    $(window).focus(function() {
+      windowFocused = true;
     });
 
     return false;
