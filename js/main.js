@@ -250,12 +250,12 @@ $(document).ready(function() {
     console.log(formData);
     
     $.ajax({
-      type: "POST",
+      type: 'GET',
       url: action,
       data: formData,
       success: function(response) {
-        var result = JSON.parse(response);
-        if (response.code == 200) {
+        console.log(response);
+        if (response == 200) {
           var greet = Math.floor(Math.random() * (greetings.length));
           $("#sendmessage").addClass("show");
           $("#sendmessage").html(greetins[greet] + ' ' + response.message);
@@ -264,7 +264,15 @@ $(document).ready(function() {
         } else {
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
-          $('#errormessage').html(response.message);
+          switch (response) {
+            case 403: 
+              $('#errormessage').html("That's a no no request right there.");
+              break;
+            case 500:
+              $('#errormessage').html('Oops we have a problem sending your mail.');
+              break;
+
+          }
         }
 
       }
