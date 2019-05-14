@@ -1,3 +1,46 @@
+// greetings
+$(function () {
+  var greetings = [
+    'Hello there!',
+    'Its nice to see you here!',
+    'Hi!',
+    'What’s up?',
+    'How’s your day?',
+    'It’s been a while!',
+    'Long time no see!',
+    'Pleased to meet you!',
+    'It’s nice to meet you!',
+    'How do you do?',
+    'Yo!',
+    'Howdy!',
+    'Whazzup?',
+    'Sup?',
+    'G’day mate!',
+    'Hiya!',
+    'Look what the cat dragged in!',
+    'What’s kickin’, little chicken?',
+    'Hello, sunshine!',
+    'Hey, howdy, hi!',
+    'Howdy, partner!',
+    'Peek-a-boo!',
+    'Howdy-doody!',
+    'I come in peace!',
+    'Ahoy, matey!',
+    'What’s crackin’?',
+    'At least, we meet for the first time for the last time!',
+    'Hello, who’s there, I’m talking.',
+    'You know who this is.',
+    'Ghostbusters, whatya want?',
+    'Here’s Johnny!',
+    'Oh, yoooouhoooo!',
+  ];
+
+  var greet = Math.floor(Math.random() * (greetings.length));
+
+  $('.greetings').prepend(greetings[greet] + '<br><br>');
+});
+
+// document ready
 $(document).ready(function() {
 
   'use strict';
