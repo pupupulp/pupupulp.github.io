@@ -108,9 +108,10 @@ $(document).ready(function() {
     $(".typed").typed({
       strings: [
         "I'm Eagan Charles Martin.", 
-        "I'm an application developer.", 
+        "I'm a developer.", 
+        "I love listening to music.",
         "I love photography.",
-        "I enjoy playing games.",
+        "I love playing games.",
       ],
       typeSpeed: 100,
       loop: true,
