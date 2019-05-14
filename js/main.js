@@ -64,14 +64,13 @@ $(document).ready(function() {
 
     $(this).addClass('active');
 
-    var target = this.hash,
-        menu = target;
+    var target = this.hash;
 
     target = $(target);
     $('html, body').stop().animate({
       'scrollTop': target.offset().top - 80
     }, 500, 'swing', function() {
-      window.location.hash = target.selector;
+      window.location.hash = target[0].id;
       $(document).on("scroll", onScroll);
     });
   });
