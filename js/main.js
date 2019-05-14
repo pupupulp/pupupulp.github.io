@@ -249,34 +249,49 @@ $(document).ready(function() {
 
     console.log(formData);
     
-    $.ajax({
-      type: 'GET',
-      url: action,
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        if (response == 200) {
-          var greet = Math.floor(Math.random() * (greetings.length));
-          $("#sendmessage").addClass("show");
-          $("#sendmessage").html(greetins[greet] + ' ' + response.message);
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          switch (response) {
-            case 403: 
-              $('#errormessage').html("That's a no no request right there.");
-              break;
-            case 500:
-              $('#errormessage').html('Oops we have a problem sending your mail.');
-              break;
+    // for php server
+    // $.ajax({
+    //   type: 'GET',
+    //   url: action,
+    //   data: formData,
+    //   success: function(response) { 
+    //     response = JSON.parse(response);
+    //     if (response.code == 200) {
+    //       var greet = Math.floor(Math.random() * (greetings.length));
+    //       $("#sendmessage").addClass("show");
+    //       $("#sendmessage").html(greetins[greet] + ' ' + response.message);
+    //       $("#errormessage").removeClass("show");
+    //       $('.contactForm').find("input, textarea").val("");
+    //     } else {
+    //       $("#sendmessage").removeClass("show");
+    //       $("#errormessage").addClass("show");
+    //       $('#errormessage').html(response.message);
+    //     }
 
-          }
-        }
+    //   }
+    // });
 
-      }
+    // for static content
+    var timeout = setTimeout(function() {
+      $("#sendmessage").removeClass("show");
+      $("#errormessage").addClass("show");
+      $('#errormessage').html('Oops we have a problem sending your mail.');
+    }, 500);
+
+    var formParams = new URLSearchParams(formData);
+    var mailToParams = 'subject=' + formParams.get('subject') + '&body=' + formParams.get('body');
+    window.open('mailto:mece.martinece@gmail.com?' + mailToParams);
+
+    $(window).blur(function() {
+      var greet = Math.floor(Math.random() * (greetings.length));
+      $("#sendmessage").addClass("show");
+      $("#sendmessage").html(greetings[greet] + ' ' + 'Thank you for sending an email!');
+      $("#errormessage").removeClass("show");
+      $('.contactForm').find("input, textarea").val("");
+      $('#mail-button').val("Send Message");
+      clearTimeout(timeout);
     });
+
     return false;
   });
 });
