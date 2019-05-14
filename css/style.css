@@ -242,7 +242,11 @@ nav ul li a {
 /* Header Styles */
 
 #header {
-  background: url("../images/header.jpeg") repeat scroll center center / cover;
+  background-image: linear-gradient(to right, #050505, #050505), url("../images/header.jpeg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: right center;
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
@@ -256,7 +260,6 @@ nav ul li a {
   justify-content: center;
   flex-direction: column;
 }
-
 
 .header-content h1 {
   font-size: 40px;
@@ -296,13 +299,12 @@ nav ul li a {
 }
 
 #about .about-img {
-  background-image: linear-gradient(to right, #252525, #252525), url("../images/profile.jpeg");
+  background-image: linear-gradient(to right, #050505, #050505), url("../images/profile.jpeg");
   background-blend-mode: overlay;
   background-size: cover;
   width: 100%;
   height: 500px;        
   width: 100%;
-  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
   margin-top: -60px;
 }
 
@@ -358,8 +360,18 @@ nav ul li a {
 
 /* Experiences Styles */
 
-#experiences { 
-  color: #fff; 
+#experiences {  
+  background-image: linear-gradient(to right, #050505, #050505), url("../images/experiences-bg.jpeg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
 }
 
 .experience-heading {
@@ -494,11 +506,12 @@ nav ul li a {
 /* Stats Styles */
 
 #stats {
-  background-image: url("../images/header.jpeg");
+  background-image: linear-gradient(to right, #050505, #050505), url("../images/stats-bg.jpeg");
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
   width: 100%;
   height: auto;
   padding-top: 50px;
@@ -512,7 +525,7 @@ nav ul li a {
 
 .stats-subheading {
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: #1f1f1f;
   margin-bottom: 30px;
 }
 
@@ -548,6 +561,7 @@ nav ul li a {
 
 #stats-calendar {
   display: none;
+  height: 0px;
 }
 
 /* Contact Styles */
