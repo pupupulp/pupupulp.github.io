@@ -169,9 +169,8 @@ nav {
   background: #050505;
   z-index: 1000;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   display: none;
-  /* opacity: .5; */
   -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
@@ -201,7 +200,6 @@ nav ul li a {
   font-family: 'Poppins', helvetica;
   font-weight: 500;
   line-height: 16px;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
