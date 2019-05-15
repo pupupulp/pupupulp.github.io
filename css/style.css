@@ -374,7 +374,7 @@ nav ul li a {
 
 .experience-subheading {
   font-family: 'Roboto', sans-serif;
-  color: #1f1f1f;
+  color: #333;
   margin-bottom: 50px;
 }
 
@@ -388,7 +388,7 @@ nav ul li a {
 }
 
 .experience-company {
-  color: #1f1f1f;
+  color: #333;
   text-transform: uppercase;
 }
 
@@ -438,7 +438,7 @@ nav ul li a {
 
 .education-subheading {
   font-family: 'Roboto', sans-serif;
-  color: #1f1f1f;
+  color: #333;
   margin-bottom: 50px;
 }
 
@@ -452,7 +452,7 @@ nav ul li a {
 }
 
 .education-from {
-  color: #1f1f1f;
+  color: #333;
   text-transform: uppercase;
 }
 
@@ -517,7 +517,7 @@ nav ul li a {
 
 .stats-subheading {
   font-family: 'Roboto', sans-serif;
-  color: #1f1f1f;
+  color: #333;
   margin-bottom: 30px;
 }
 
@@ -563,8 +563,14 @@ nav ul li a {
   width: 100%;
 }
 
-.contact-header {
+.contact-heading {
   font-family: 'Poppins', helvetica;
+  color: #fff;
+}
+
+.contact-subheading {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
   margin-bottom: 30px;
 }
 
