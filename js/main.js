@@ -48,6 +48,9 @@ $(document).ready(function() {
 
   'use strict';
 
+  // animate on scroll
+  new WOW().init();
+
   // smooth scrolling
   $(document).on("scroll", onScroll);
 
