@@ -242,7 +242,7 @@ nav ul li a {
 /* Header Styles */
 
 #header {
-  background-image: linear-gradient(to right, #050505, #050505), url("../images/header.jpeg");
+  background-image: linear-gradient(to right, #090909, #090909), url("../images/header.jpeg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: fit;
@@ -361,7 +361,7 @@ nav ul li a {
 /* Experiences Styles */
 
 #experiences {  
-  background-image: linear-gradient(to right, #050505, #050505), url("../images/experiences-bg.jpeg");
+  background-image: linear-gradient(to right, #090909, #090909), url("../images/experiences-bg.jpeg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: contain;
@@ -506,7 +506,7 @@ nav ul li a {
 /* Stats Styles */
 
 #stats {
-  background-image: linear-gradient(to right, #050505, #050505), url("../images/stats-bg.jpeg");
+  background-image: linear-gradient(to right, #090909, #090909), url("../images/stats-bg.jpeg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: contain;
