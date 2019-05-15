@@ -626,11 +626,11 @@ nav ul li a {
   height: 400px;
   margin-top: 50px;
   margin-bottom: 50px;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
+  filter: grayscale(100%) invert(100%);
+  -webkit-filter: grayscale(100%) invert(100%);
+  -moz-filter: grayscale(100%) invert(100%);
+  -ms-filter: grayscale(100%) invert(100%);
+  -o-filter: grayscale(100%) invert(100%);
 }
 
 /* Footer Styles */
