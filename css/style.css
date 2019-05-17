@@ -557,16 +557,31 @@ nav ul li a {
 .stat-count .stat-lstreak-header, 
 .stat-count .stat-cstreak-header {
   padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .stat-count .stat-contribs-footer,
 .stat-count .stat-lstreak-footer,
 .stat-count .stat-cstreak-footer {
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
 .counter-text p{
   display: inline !important;
+}
+
+.counter-icon {
+  font-size: 6em;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  letter-spacing: 0; 
+  text-align: center; 
+  transform: translate(-50%, -45px); 
+  z-index: -1;
+  opacity: .3;
+  color: #333;
 }
 
 .stat-count .counter {
