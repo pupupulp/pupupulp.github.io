@@ -294,6 +294,7 @@ nav ul li a {
   width: 100%;
   height: auto;
   background: #050505;
+  color: #fff;
 }
 
 #about .about-img {
@@ -319,7 +320,17 @@ nav ul li a {
 }
 
 .about-skills {
-  margin-top: 30px;
+  margin-top: 90px;
+}
+
+.skills-heading {
+  font-family: 'Poppins', helvetica;
+}
+
+.skills-subheading {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin-bottom: 50px;
 }
 
 .radial-area {
@@ -343,8 +354,21 @@ nav ul li a {
   content:'%'; 
 }
 
+
+.radial-progress .progress-icon { 
+  font-size: 6em;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  letter-spacing: 0; 
+  text-align: center; 
+  transform: translate(-50%, -80px); 
+  z-index: -1;
+  opacity: .2;
+}
+
 .radial-progress .progress-title { 
-  font-size: 1em;
+  font-size: 1.2em;
   position: absolute; 
   top: 50%; 
   left: 50%; 
