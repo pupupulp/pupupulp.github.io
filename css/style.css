@@ -364,7 +364,7 @@ nav ul li a {
   text-align: center; 
   transform: translate(-50%, -80px); 
   z-index: -1;
-  opacity: .2;
+  opacity: .3;
 }
 
 .radial-progress .progress-title { 

@@ -168,7 +168,7 @@ $(document).ready(function() {
         text: {
           
         },
-        from: { color: '#050505', width: 1 },
+        from: { color: '#1f1f1f', width: 2 },
         to: { color: '#333', width: 3 },
         // Set default step function for all animate calls
         step: function(state, circle) {
