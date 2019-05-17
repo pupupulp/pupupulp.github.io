@@ -242,7 +242,7 @@ nav ul li a {
 
 #header {
   background-image: linear-gradient(to right, #090909, #090909), url("../images/header.jpeg");
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: fit;
   background-position: right center;
@@ -383,7 +383,7 @@ nav ul li a {
 
 #experiences {  
   background-image: linear-gradient(to right, #090909, #090909), url("../images/experiences-bg.jpeg");
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -526,7 +526,7 @@ nav ul li a {
 
 #stats {
   background-image: linear-gradient(to right, #090909, #090909), url("../images/stats-bg.jpeg");
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -606,7 +606,7 @@ nav ul li a {
 
 #quote {
   background-image: linear-gradient(to right, #090909, #090909), url("../images/quote-bg.jpeg");
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
