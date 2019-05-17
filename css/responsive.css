@@ -184,6 +184,12 @@
     margin-bottom: 0;
   }
 
+  /* Education Styles */
+  .education-wrapper { 
+    position: relative;
+    margin-left: 60px; 
+  }
+
   /* Contact Styles */
 
   .contact-map {
