@@ -50,7 +50,7 @@ $(document).ready(function() {
 
   // animate on scroll
   new WOW( {
-    mobile: false
+    // mobile: false
   }).init();
 
   // smooth scrolling
