@@ -596,6 +596,45 @@ nav ul li a {
   height: 0px;
 }
 
+/* Project Styles */
+
+#project div {
+  display: none;
+}
+
+/* Quote Styles */
+
+#quote {
+  background-image: linear-gradient(to right, #090909, #090909), url("../images/quote-bg.jpeg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.quote-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6em;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: 1px #999999;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+.quote-subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #999999;
+  text-transform: uppercase;
+  opacity: .5;
+}
+
 /* Contact Styles */
 
 #contact {
