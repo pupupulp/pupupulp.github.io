@@ -624,7 +624,7 @@ nav ul li a {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6em;
   font-weight: bolder;
-  color: transparent;
+  /* color: transparent; */
   -webkit-text-stroke: 1px #999999;
   text-transform: uppercase;
   opacity: .3;
